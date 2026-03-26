@@ -3,14 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Shashi Kumar Portfolio</title>
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-<!-- Navbar -->
+<!-- ================= LOADER ================= -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
 <nav>
   <h2>Shashi Kumar</h2>
+
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -19,13 +31,17 @@
     <li><a href="#blog">Blog</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+
+  <!-- Dark Mode Toggle -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 </nav>
 
-<!-- Hero Section -->
+<!-- ================= HERO SECTION ================= -->
 <section class="hero">
   <div class="hero-content">
     
-    <div class="hero-text">
+    <!-- Left Content -->
+    <div class="hero-text" data-aos="fade-right">
       <h1>Shashi Kumar</h1>
       <p>C# Automation Engineer | Software Engineer | Spiritual Learner</p>
 
@@ -35,133 +51,125 @@
       </div>
     </div>
 
-    <div class="hero-image">
+    <!-- Right Image -->
+    <div class="hero-image" data-aos="fade-left">
       <img src="assets/images/profile.jpeg" alt="Profile">
     </div>
 
   </div>
 </section>
 
-
-<!-- About -->
+<!-- ================= ABOUT ================= -->
 <section id="about">
   <h2>About Me</h2>
 
   <p>
-    I am a Senior Test Engineer with 4+ years of experience in Automation Testing,
-    API Testing, and Performance Testing. I specialize in building scalable test
-    frameworks using C#, Selenium, NUnit, and Playwright.
+    Senior Test Engineer with 4+ years in Automation, API & Performance Testing.
+    Specialized in C#, Selenium, NUnit, and Playwright frameworks.
   </p>
 
-  <div class="about-cards">
+  <div class="about-cards" data-aos="zoom-in">
 
     <div class="card">
       <h3>Professional Journey</h3>
-      <p>Started as an Associate Engineer and grew into a Senior Test Engineer leading AWS migration testing projects.</p>
+      <p>Grew from Associate Engineer to Senior Test Engineer leading AWS migration projects.</p>
     </div>
 
     <div class="card">
       <h3>Technical Expertise</h3>
-      <p>Strong experience in automation frameworks, CI/CD pipelines, microservices testing, and cloud-based systems.</p>
+      <p>Automation frameworks, CI/CD, microservices testing & cloud-based systems.</p>
     </div>
 
     <div class="card">
       <h3>Beyond Work</h3>
-      <p>Focused on discipline, continuous learning, and inspired by Bhagavad Gita teachings.</p>
+      <p>Focused on discipline, continuous learning & Bhagavad Gita teachings.</p>
     </div>
 
   </div>
 </section>
 
-
-<!-- Projects -->
+<!-- ================= PROJECTS ================= -->
 <section id="projects">
   <h2>Projects</h2>
 
   <div class="project-container">
 
-    <div class="project-card">
+    <div class="project-card" data-aos="fade-up">
       <h3>AWS Migration Testing (HSP)</h3>
-      <p>Led testing for AWS migration of a Healthcare platform ensuring data integrity and performance with minimal downtime.</p>
+
+  <!-- SHORT SUMMARY (1 line only) -->
+  <p>Led AWS migration testing for a healthcare platform.</p>
+
+  <!-- BUTTON -->
+  <button class="view-btn" onclick="toggleDetails(this)">View More</button>
+
+  <!-- FULL DETAILS -->
+  <div class="hidden-details">
+    <ul>
+      <li>Created verification plans for AWS migration ensuring smooth decoupling.</li>
+      <li>Designed and executed microservices test plans (data integrity & performance).</li>
+      <li>Developed Test Protocol and comprehensive API test scenarios.</li>
+      <li>Collaborated with teams aligning AWS infrastructure and Postman testing.</li>
+      <li>Performed regression and performance testing using Postman.</li>
+      <li>Resolved critical defects improving reliability and reducing post-deployment issues.</li>
+    </ul>
+  </div>
+
+</div>
+
+    <div class="project-card" data-aos="fade-up">
+      <h3>Selenium + C# Framework</h3>
+      <p>Built scalable automation with NUnit, ExtentReports & TeamCity.</p>
     </div>
 
-    <div class="project-card">
-      <h3>Automation Framework (Selenium + C#)</h3>
-      <p>Developed scalable automation framework with NUnit, ExtentReports and CI/CD integration using TeamCity.</p>
-    </div>
-
-    <div class="project-card">
+    <div class="project-card" data-aos="fade-up">
       <h3>Playwright Automation</h3>
-      <p>Built automation scripts using Playwright and JavaScript, improving execution speed and reliability.</p>
+      <p>Improved speed & reliability using Playwright + JavaScript.</p>
     </div>
 
   </div>
 </section>
 
-
-
-<!-- Skills -->
+<!-- ================= SKILLS ================= -->
 <section id="skills">
   <h2>Skills</h2>
 
+  <!-- Skill Tags -->
   <div class="skills-container">
-    <span>C#</span>
-    <span>Python</span>
-    <span>JavaScript</span>
-    <span>TypeScript</span>
-    <span>Selenium</span>
-    <span>NUnit</span>
-    <span>Playwright</span>
-    <span>AWS</span>
-    <span>SQL</span>
-    <span>PostgreSQL</span>
-    <span>JMeter</span>
-    <span>Git</span>
+    <span>C#</span><span>Python</span><span>JavaScript</span>
+    <span>TypeScript</span><span>Selenium</span><span>NUnit</span>
+    <span>Playwright</span><span>AWS</span><span>SQL</span>
+    <span>PostgreSQL</span><span>JMeter</span><span>Git</span>
     <span>TeamCity</span>
   </div>
-</section>
 
-<!-- Gita -->
-<section id="gita">
-  <h2>Bhagavad Gita Wisdom</h2>
+  <!-- Skill Bars -->
+  <div class="skills-bars">
 
-  <div class="gita-box">
-    <p>
-      “Uddhared Atmanatmanam…” <br><br>
-      One must elevate oneself by one's own mind, not degrade oneself.
-      Discipline and self-control are the keys to success.
-    </p>
-  </div>
-</section>
-
-
-
-<!-- Blog -->
-<section id="blog">
-  <h2>Life Lessons</h2>
-
-  <div class="blog-container">
-
-    <div class="blog-card">
-      <h3>Discipline is Power</h3>
-      <p>Small daily habits build strong character and long-term success.</p>
+    <div class="skill-bar">
+      <p>C#</p>
+      <div class="bar"><span style="width:90%"></span></div>
     </div>
 
-    <div class="blog-card">
-      <h3>Consistency Wins</h3>
-      <p>Even small progress every day leads to big achievements.</p>
+    <div class="skill-bar">
+      <p>Selenium</p>
+      <div class="bar"><span style="width:85%"></span></div>
     </div>
 
-    <div class="blog-card">
-      <h3>Control Your Mind</h3>
-      <p>Mind is your best friend or worst enemy — control it wisely.</p>
+    <div class="skill-bar">
+      <p>Playwright</p>
+      <div class="bar"><span style="width:80%"></span></div>
+    </div>
+
+    <div class="skill-bar">
+      <p>AWS</p>
+      <div class="bar"><span style="width:75%"></span></div>
     </div>
 
   </div>
 </section>
 
-
-<!-- Awards -->
+<!-- ================= AWARDS ================= -->
 <section id="awards">
   <h2>Awards</h2>
 
@@ -169,32 +177,115 @@
 
     <div class="award-card">
       <h3>⭐ Star of the Month</h3>
-      <p>Recognized for creating automated Postman collection that reduced API verification time.</p>
+      <p>Reduced API verification time using automation.</p>
     </div>
 
     <div class="award-card">
       <h3>🏆 Spot Award</h3>
-      <p>Played key role in reducing execution time for complex features in client project.</p>
+      <p>Optimized execution time for complex features.</p>
     </div>
 
   </div>
 </section>
 
+<!-- ================= WHY HIRE ME ================= -->
+<section class="hire-me">
+  <h2>Why Hire Me?</h2>
+  <ul>
+    <li>✔ 4.5+ years experience</li>
+    <li>✔ Automation + API + Performance expert</li>
+    <li>✔ Fast learner & disciplined</li>
+    <li>✔ AWS migration experience</li>
+  </ul>
+</section>
 
+<!-- ================= GITA ================= -->
+<section id="gita">
+  <h2>Bhagavad Gita Wisdom</h2>
 
-<!-- Contact -->
+  <div class="gita-box">
+    <p>
+      “Uddhared Atmanatmanam…” <br><br>
+      Elevate yourself by your mind. Discipline is the key to success.
+    </p>
+  </div>
+</section>
+
+<!-- ================= BLOG ================= -->
+<section id="blog">
+  <h2>Thought Inside Thought</h2>
+
+  <div class="thought-container">
+
+    <div class="thought-card">
+      <p>"Consistency builds destiny."</p>
+    </div>
+
+    <div class="thought-card">
+      <p>"Discipline is choosing what matters most."</p>
+    </div>
+
+    <div class="thought-card">
+      <p>"Control your mind before it controls you."</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
 <section id="contact">
   <h2>Contact Me</h2>
 
-  <p>📍 Mysore, India</p>
-  <p>📞 7033053707</p>
-  <p>📧 shashikumar110198@gmail.com</p>
-  <a href="https://www.linkedin.com/in/shashi-kumar-68b70315b" target="_blank">
-  LinkedIn Profile
-</a>
+  <div class="contact-container">
 
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <p>📍 Mysore, India</p>
+      <p>📞 <a href="tel:7033053707">7033053707</a></p>
+      <p>📧 <a href="mailto:shashikumar110198@gmail.com">Email Me</a></p>
 
+      <p>🔗 <a href="https://www.linkedin.com/in/shashi-kumar-68b70315b" target="_blank">LinkedIn</a></p>
+      <p>💻 <a href="https://github.com/Shashi227" target="_blank">GitHub</a></p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
 </section>
+
+<!-- ================= SCRIPTS ================= -->
+
+<!-- AOS Init -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+
+<!-- Dark Mode -->
+<script>
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+</script>
+
+<!-- Loader -->
+<script>
+window.onload = function() {
+  const loader = document.getElementById("loader");
+  loader.style.opacity = "0";
+  setTimeout(() => loader.style.display = "none", 500);
+};
+</script>
+
+
 
 
 </body>
